@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Web Factory - Venda de Sites Profissionais</title>
+    <title>AI Web Factory - Sites Profissionais</title>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -23,264 +24,182 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <script>
-      document.addEventListener("keydown", function (e) {
-        if (
-          e.key === "F12" ||
-          (e.ctrlKey &&
-            e.shiftKey &&
-            ["I", "C", "J"].includes(e.key.toUpperCase())) ||
-          (e.ctrlKey && e.key.toUpperCase() === "U")
-        ) {
-          e.preventDefault();
-          alert("Essa ação está desativada!");
-        }
-      });
-      document.addEventListener("contextmenu", function (e) {
-        e.preventDefault();
-        alert("Ação nao permitida!");
-      });
-      document.addEventListener("selectstart", function (e) {
-        e.preventDefault();
-      });
-      document.addEventListener("copy", function (e) {
-        e.preventDefault();
-        alert("Copiar conteúdo não é permitido!");
-      });
-    </script>
-
     <div class="top-p">
-      <p>20% de desconto no 1⁰ Projeto.<a href="#">Saiba mais</a></p>
+      <div class="container">
+        <p>20% de desconto no 1⁰ Projeto.<a href="#contact">Saiba mais</a></p>
+      </div>
     </div>
 
-    <nav class="navbar">
-      <div class="logo-container">
-        <div class="logo">WF</div>
-        <div class="logo-text">Web Factory</div>
-      </div>
+    <header class="header">
+      <nav class="navbar container">
+        <a href="#" class="logo-container">
+          <div class="logo">WF</div>
+          <div class="logo-text">Web Factory</div>
+        </a>
 
-      <nav class="nav-desktop">
-        <a href="#">Sana Agents</a>
-        <a href="#">Sana Learn</a>
-        <a href="#">Mission</a>
-        <a href="#">Careers</a>
-        <a href="#" class="nav-button">Sign in</a>
+        <nav class="nav-desktop">
+          <a href="#servicos">Serviços</a>
+          <a href="#cursos">Cursos</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contato</a>
+          <a href="#" class="nav-button">Sign in</a>
+        </nav>
+
+        <button class="nav-toggle" id="navToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="nav-mobile-menu" id="navMenu">
+          <button class="nav-close" id="navClose">&times;</button>
+          <a href="#servicos">Serviços</a>
+          <a href="#cursos">Cursos</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contato</a>
+          <a href="#" class="nav-button">Sign in</a>
+          <label class="switch">
+            <input id="theme-switch" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </div>
       </nav>
+    </header>
 
-      <button class="nav-toggle" id="navToggle">
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M4 18H20"
-            stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
-          <path
-            d="M4 12H20"
-            stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
-          <path
-            d="M4 6H20"
-            stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
-        </svg>
-      </button>
-
-      <div class="nav-mobile-menu" id="navMenu">
-        <button class="nav-close" id="navClose">&times;</button>
-        <label class="switch">
-          <input id="theme-switch" type="checkbox" />
-          <span class="slider">
-            <div class="star star_1"></div>
-            <div class="star star_2"></div>
-            <div class="star star_3"></div>
-            <svg viewBox="0 0 16 16" class="cloud_1 cloud">
-              <path
-                transform="matrix(.77976 0 0 .78395-299.99-418.63)"
-                fill="#fff"
-                d="m391.84 540.91c-.421-.329-.949-.524-1.523-.524-1.351 0-2.451 1.084-2.485 2.435-1.395.526-2.388 1.88-2.388 3.466 0 1.874 1.385 3.423 3.182 3.667v.034h12.73v-.006c1.775-.104 3.182-1.584 3.182-3.395 0-1.747-1.309-3.186-2.994-3.379.007-.106.011-.214.011-.322 0-2.707-2.271-4.901-5.072-4.901-2.073 0-3.856 1.202-4.643 2.925"
-              ></path>
-            </svg>
-          </span>
-        </label>
-        <a href="#">add função</a>
-        <a href="#">add função</a>
-        <a href="#">add função</a>
-        <a href="https://sobre.onrender.com/">sobre</a>
-      </div>
-      </nav>
     <main>
-      <section id="hero">
+      <section id="hero" class="section-container">
         <div class="container hero-content">
           <div class="hero-text">
-            <h1><span>20% off</span> no 1⁰ Projeto</h1>
-            <p>
-              Mostre o potencial da sua empresa, não perca essa oportunidade
-              para ter a maior visibilidade e uma empresa completa
+            <h1>Criação de Sites com <span>Inteligência Artificial</span></h1>
+            <p class="hero-subtitle">
+              Tenha um site profissional, rápido e otimizado em tempo recorde.
+              Aproveite <strong>20% off</strong> no seu primeiro projeto.
             </p>
-            <a href="https://templates-rmc2.onrender.com" class="btn shop-now"
-              >Ver Modelos</a
-            >
-
-            <div class="loader-overlay">
-              <div class="loader">
-                <img src="src/load/logo1.5.png" alt="Logo" class="loader-logo" />
-              </div>
-              <p class="loader-text"></p>
-            </div>
+            <a href="#servicos" class="btn btn-primary">Ver Modelos</a>
+            <a href="#contact" class="btn btn-secondary">Pedir Orçamento</a>
           </div>
           </div>
       </section>
 
-      <section class="section fade-in section-container" id="servicos">
+      <section id="servicos" class="section-container">
         <div class="container">
-          <h2>Nossos Serviços</h2>
-          <div class="products-grid">
-            <div class="product-card">
-              <h3 class="product-title">Site Profissional</h3>
+          <div class="section-header">
+            <h2>Nossos Serviços</h2>
+            <p>Soluções completas para sua presença digital.</p>
+          </div>
+
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+              <h3 class="card-title">Site Profissional</h3>
               <p>
                 Criação de sites completos com design personalizado, SEO
                 otimizado e carregamento rápido + Dominio.
               </p>
-              <div class="product-price">Com Desconto, Oferta ilimitada</div>
+              <div class="card-price">Com Desconto, Oferta ilimitada</div>
             </div>
-            <div class="product-card">
-              <h3 class="product-title">Landing Pages</h3>
+            <div class="service-card">
+              <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+              <h3 class="card-title">Landing Pages</h3>
               <p>
                 Páginas únicas para campanhas, lançamento de produtos e captação
                 de clientes.
               </p>
-              <div class="product-price">A partir de R$ 20,00</div>
+              <div class="card-price">A partir de R$ 20,00</div>
             </div>
-            <div class="product-card">
-              <h3 class="product-title">Portfólios Pessoais</h3>
+            <div class="service-card">
+              <div class="card-icon"><i class="fas fa-paint-brush"></i></div>
+              <h3 class="card-title">Portfólios Pessoais</h3>
               <p>
-                Sites para profissionais autônomos, lojas pequenas, para as
-                pessoas mostrarem seu negócio.
+                Sites para profissionais autônomos e lojas pequenas mostrarem
+                seu negócio.
               </p>
-              <div class="product-price">A partir de 70,00 C/ Descontos!</div>
-            </div>
-            <div class="product-card">
-              <h3 class="product-title">Recriação de Sites</h3>
-              <p>
-                Melhoria e reconstrução de sites antigos com tecnologia moderna
-                e performance otimizada.
-              </p>
-              <div class="product-price">A partir de R$30,00</div>
-            </div>
-            <div class="product-card">
-              <h3 class="product-title">Landing Pages 2.0</h3>
-              <p>
-                Páginas únicas onde voce pode ter o que quiser personalizado.
-              </p>
-              <div class="product-price">A partir de um valor combinado</div>
+              <div class="card-price">A partir de 70,00 C/ Descontos!</div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section-container">
+      <section id="clients" class="section-container">
         <div class="container">
-          <h2>Nossos Clientes</h2>
+          <div class="section-header">
+            <h2>Empresas que confiam na gente</h2>
+          </div>
           <div class="carrossel-container">
             <div class="carrossel-track">
               <div class="logo-item">
-                <img src="logos/logo1.png" alt="Empresa A" />
-              </div>
-              <div class="logo-item">
-                <img src="logos/logo1.png" alt="Empresa B" />
-              </div>
-              <div class="logo-item">
                 <img
-                  src="https://via.placeholder.com/150x80/9013FE/FFFFFF?text=Empresa+C"
-                  alt="Empresa C"
-                />
-              </div>
-              <div class="logo-item">
-                <img
-                  src="https://via.placeholder.com/150x80/F5A623/FFFFFF?text=Empresa+D"
-                  alt="Empresa D"
-                />
-              </div>
-              <div class="logo-item">
-                <img
-                  src="https://via.placeholder.com/150x80/7ED321/FFFFFF?text=Empresa+E"
-                  alt="Empresa E"
-                />
-              </div>
-              <div class="logo-item">
-                <img
-                  src="https://via.placeholder.com/150x80/B8E986/FFFFFF?text=Empresa+F"
-                  alt="Empresa F"
-                />
-              </div>
-              <div class="logo-item">
-                <img
-                  src="https://via.placeholder.com/150x80/4A90E2/FFFFFF?text=Empresa+A"
+                  src="https://via.placeholder.com/150x80/9013FE/FFFFFF?text=Empresa+A"
                   alt="Empresa A"
                 />
               </div>
               <div class="logo-item">
                 <img
-                  src="https://via.placeholder.com/150x80/50E3C2/FFFFFF?text=Empresa+B"
+                  src="https://via.placeholder.com/150x80/F5A623/FFFFFF?text=Empresa+B"
                   alt="Empresa B"
                 />
               </div>
               <div class="logo-item">
                 <img
-                  src="https://via.placeholder.com/150x80/9013FE/FFFFFF?text=Empresa+C"
+                  src="https://via.placeholder.com/150x80/7ED321/FFFFFF?text=Empresa+C"
                   alt="Empresa C"
                 />
               </div>
               <div class="logo-item">
                 <img
-                  src="https://via.placeholder.com/150x80/F5A623/FFFFFF?text=Empresa+D"
+                  src="https://via.placeholder.com/150x80/B8E986/FFFFFF?text=Empresa+D"
                   alt="Empresa D"
                 />
               </div>
               <div class="logo-item">
                 <img
-                  src="https://via.placeholder.com/150x80/7ED321/FFFFFF?text=Empresa+E"
+                  src="https://via.placeholder.com/150x80/4A90E2/FFFFFF?text=Empresa+E"
                   alt="Empresa E"
                 />
               </div>
               <div class="logo-item">
                 <img
-                  src="https://via.placeholder.com/150x80/B8E986/FFFFFF?text=Empresa+F"
+                  src="https://via.placeholder.com/150x80/50E3C2/FFFFFF?text=Empresa+F"
                   alt="Empresa F"
                 />
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-container" id="blogs">
-        <div class="container">
-          <div class="sub-heading">
-            <span>blogs</span>
-            <h2>latest news</h2>
-          </div>
-          <div class="grid-container">
-            <div class="grid-item blog-item">
-              <img src="20251028_225010.png" alt="" />
-              <div class="blog-content">
-                <h3>Título bem chamatio</h3>
-                <p>breve descrição.</p>
-                <a href="#" class="read-more">Botão</a>
+              <div class="logo-item">
+                <img
+                  src="https://via.placeholder.com/150x80/9013FE/FFFFFF?text=Empresa+A"
+                  alt="Empresa A"
+                />
+              </div>
+              <div class="logo-item">
+                <img
+                  src="https://via.placeholder.com/150x80/F5A623/FFFFFF?text=Empresa+B"
+                  alt="Empresa B"
+                />
+              </div>
+              <div class="logo-item">
+                <img
+                  src="https://via.placeholder.com/150x80/7ED321/FFFFFF?text=Empresa+C"
+                  alt="Empresa C"
+                />
+              </div>
+              <div class="logo-item">
+                <img
+                  src="https://via.placeholder.com/150x80/B8E986/FFFFFF?text=Empresa+D"
+                  alt="Empresa D"
+                />
+              </div>
+              <div class="logo-item">
+                <img
+                  src="https://via.placeholder.com/150x80/4A90E2/FFFFFF?text=Empresa+E"
+                  alt="Empresa E"
+                />
+              </div>
+              <div class="logo-item">
+                <img
+                  src="https://via.placeholder.com/150x80/50E3C2/FFFFFF?text=Empresa+F"
+                  alt="Empresa F"
+                />
               </div>
             </div>
           </div>
@@ -289,45 +208,41 @@
 
       <section id="cursos" class="section-container">
         <div class="container">
-          <div class="sub-heading">
+          <div class="section-header">
             <span>Cursos em destaque</span>
             <h2>Aprenda e Lucre com Conhecimento</h2>
           </div>
-          <div class="carousel-nav">
-            <button class="swiper-button-prev">&#10094;</button>
-            <button class="swiper-button-next">&#10095;</button>
-          </div>
-          <div class="cursos-carousel">
-            <div class="curso-card">
-              <img src="img/curso1.jpg" alt="Curso 1" />
-              <h3>Marketing Digital para Iniciantes</h3>
+          <div class="services-grid">
+            <div class="service-card">
+              <img src="img/curso1.jpg" alt="Curso 1" class="card-image" />
+              <h3 class="card-title">Marketing Digital para Iniciantes</h3>
               <p>Aprenda a vender todos os dias com estratégias comprovadas.</p>
               <a
                 href="https://hotmart.com/linkafiliado1"
                 target="_blank"
-                class="btn"
+                class="btn btn-secondary"
                 >Ver Curso</a
               >
             </div>
-            <div class="curso-card">
-              <img src="img/curso2.jpg" alt="Curso 2" />
-              <h3>Design com Canva</h3>
+            <div class="service-card">
+              <img src="img/curso2.jpg" alt="Curso 2" class="card-image" />
+              <h3 class="card-title">Design com Canva</h3>
               <p>Crie artes incríveis e profissionais usando apenas o Canva.</p>
               <a
                 href="https://hotmart.com/linkafiliado2"
                 target="_blank"
-                class="btn"
+                class="btn btn-secondary"
                 >Acessar</a
               >
             </div>
-            <div class="curso-card">
-              <img src="img/curso3.jpg" alt="Curso 3" />
-              <h3>Tráfego Pago Avançado</h3>
+            <div class="service-card">
+              <img src="img/curso3.jpg" alt="Curso 3" class="card-image" />
+              <h3 class="card-title">Tráfego Pago Avançado</h3>
               <p>Domine anúncios no Meta e Google e escale seus resultados.</p>
               <a
                 href="https://hotmart.com/linkafiliado3"
                 target="_blank"
-                class="btn"
+                class="btn btn-secondary"
                 >Começar</a
               >
             </div>
@@ -335,74 +250,46 @@
         </div>
       </section>
 
-      <section class="faq-section fade-in section-container" id="faq">
+      <section id="faq" class="section-container">
         <div class="container">
-          <h2>Perguntas Frequentes (FAQ)</h2>
+          <div class="section-header">
+            <h2>Perguntas Frequentes (FAQ)</h2>
+          </div>
           <div class="faq-container">
             <div class="faq-item">
               <button class="faq-question">
-                <span
-                  >💡 Como funciona a criação de um site pela AI Web
-                  Factory?</span
-                >
+                <span>Como funciona a criação de um site?</span>
                 <i class="fas fa-chevron-down"></i>
               </button>
               <div class="faq-answer">
                 <p>
                   Você escolhe o tipo de site, envia suas preferências e nossa
-                  IA cria o design personalizado automaticamente. Depois,
-                  fazemos os ajustes finais juntos!
+                  IA cria o design personalizado. Depois, fazemos os ajustes
+                  finais juntos!
                 </p>
               </div>
             </div>
             <div class="faq-item">
               <button class="faq-question">
-                <span>⏱️ Quanto tempo leva para o site ficar pronto?</span>
+                <span>Quanto tempo leva para o site ficar pronto?</span>
                 <i class="fas fa-chevron-down"></i>
               </button>
               <div class="faq-answer">
                 <p>
                   Em média, entre 24 e 48 horas após o envio das informações
-                  necessárias, dependendo da complexidade do projeto.
+                  necessárias, dependendo da complexidade.
                 </p>
               </div>
             </div>
             <div class="faq-item">
               <button class="faq-question">
-                <span>💰 Posso pagar parcelado?</span>
+                <span>Posso pagar parcelado?</span>
                 <i class="fas fa-chevron-down"></i>
               </button>
               <div class="faq-answer">
                 <p>
-                  Sim! Aceitamos pagamentos via Pix, cartão de crédito, boleto e
-                  outras formas. Parcelamentos podem ser combinados
-                  diretamente pelo WhatsApp.
-                </p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-question">
-                <span>🔒 Vocês oferecem suporte após a entrega?</span>
-                <i class="fas fa-chevron-down"></i>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  Sim, oferecemos suporte técnico gratuito durante o contrato
-                  após a entrega e planos adicionais de manutenção mensal,
-                  caso deseje.
-                </p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-question">
-                <span>🧠 É possível integrar IA no meu site?</span>
-                <i class="fas fa-chevron-down"></i>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  Claro! Podemos adicionar chatbots inteligentes, assistentes
-                  automáticos e até sistemas com ideias integradas, sob
-                  demanda.
+                  Sim! Aceitamos Pix, cartão de crédito e boleto.
+                  Parcelamentos podem ser combinados pelo WhatsApp.
                 </p>
               </div>
             </div>
@@ -410,102 +297,96 @@
         </div>
       </section>
 
-      <section class="section-container">
+      <section id="contact" class="section-container">
         <div class="container">
-          <div class="facilities">
-            <div class="facility-item">
-              <div class="icon"><i class="fas fa-truck-fast"></i></div>
-              <h3>Free Shipping</h3>
+          <div class="contact-wrapper">
+            <div class="contact-text">
+              <h2>Entre em contato</h2>
               <p>
-                Enjoy free shipping on all orders over 150. Fast and reliable
-                delivery to your doorstep.
+                Preencha o formulário e nossa equipe entrará em contato com
+                você em breve para um orçamento sem compromisso.
               </p>
+              <div class="contact-info">
+                <p>
+                  <i class="fas fa-envelope"></i>
+                  Iawebfactory.site@gmail.com
+                </p>
+                <p>
+                  <i class="fab fa-instagram"></i> @aiwebfactory_25
+                </p>
+              </div>
             </div>
-            <div class="facility-item">
-              <div class="icon"><i class="fas fa-headset"></i></div>
-              <h3>24/7 Suporte</h3>
-              <p>
-                Nossa equipe de suporte dedicada está disponível 24 horas por
-                dia para ajudá-lo com quaisquer dúvidas ou problemas
-              </p>
-            </div>
-            <div class="facility-item">
-              <div class="icon"><i class="fas fa-hand-holding-dollar"></i></div>
-              <h3>Garantia de todos os serviços</h3>
-              <p>
-                Algo aconteceu ? Oferecemos um suporte todos os dias
-                garantindo qualidade..
-              </p>
+            <div class="contact-form">
+              <form
+                action="https://formsubmit.co/iawebfactory.site@gmail.com"
+                method="POST"
+              >
+                <div class="input-group">
+                  <label for="name">Nome completo</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="input"
+                    required
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="email">E-mail</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="input"
+                    required
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="subject">Assunto</Cabel>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    class="input"
+                    required
+                  />
+                </div>
+                <div class="btn-container">
+                  <button type="submit" class="btn btn-primary">
+                    Enviar Mensagem
+                  </button>
+                </div>
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://seusite.com/thank-you.html"
+                />
+                <input type="hidden" name="_captcha" value="false" />
+              </form>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <section id="contact" class="form-container section-container">
-      <div class="container">
-        <h1>Entre em contato</h1>
-        <p>
-          Preencha o formulário abaixo e entraremos em contato com você em
-          breve.
-        </p>
-
-        <form
-          action="https://formsubmit.co/iawebfactory.site@gmail.com"
-          method="POST"
-          autocomplete="off"
-        >
-          <div class="input-single">
-            <input type="text" name="name" class="input" required />
-            <label>Nome completo</label>
-          </div>
-          <div class="input-single">
-            <input type="email" name="email" class="input" required />
-            <label>E-mail</label>
-          </div>
-          <div class="input-single">
-            <input
-              type="tel"
-              name="phone"
-              class="input"
-              required
-              pattern="[0-9]{8,15}"
-            />
-            <label>Número de telefone</label>
-          </div>
-          <div class="input-single">
-            <input type="text" name="subject" class="input" required />
-            <label>Assunto</label>
-          </div>
-          <div class="btn">
-            <input type="submit" value="Enviar" />
-          </div>
-          <input
-            type="hidden"
-            name="_next"
-            value="https://seusite.com/thank-you.html"
-          />
-          <input type="hidden" name="_captcha" value="false" />
-        </form>
-      </div>
-    </section>
-
     <footer class="footer-content">
       <div class="container">
         <div class="footer-grid">
           <div class="footer-column">
-            <a href="#" class="footer-logo"
-              ><img src="20251028_225217.png" alt="Logo"
-            /></a>
-            <p>229,web address , Brasil</p>
+            <a href="#" class="logo-container">
+              <div class="logo">WF</div>
+              <div class="logo-text">Web Factory</div>
+            </a>
+            <p>
+              Transformando ideias em sites profissionais com o poder da IA.
+            </p>
             <p>Iawebfactory.site@gmail.com</p>
           </div>
+
           <div class="footer-column">
             <h3>Veja mais</h3>
             <ul class="footer-links">
-              <li><a href="#">Sobre nós</a></li>
-              <li><a href="#">Serviços</a></li>
-              <li><a href="#">suporte</a></li>
+              <li><a href="#servicos">Serviços</a></li>
               <li>
                 <a href="https://termos-condicoes.onrender.com"
                   >Termos de uso</a
@@ -518,28 +399,25 @@
               </li>
             </ul>
           </div>
+
           <div class="footer-column">
-            <h3>Pergunte, tire dúvidas ou entre em contato</h3>
-          </div>
-          <div class="footer-column">
-            <h3>conecte-se</h3>
+            <h3>Fale Conosco</h3>
             <ul class="footer-links">
-              <li>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/aiwebfactory_25?igsh=MXZtand4b2ZkcGRlaQ=="
-                  ><i class="fab fa-instagram"></i
-                ></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-              </li>
+              <li><a href="#contact">Formulário</a></li>
+              <li><a href="#">WhatsApp</a></li>
             </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Conecte-se</h3>
+            <div class="social-links">
+              <a
+                href="https://www.instagram.com/aiwebfactory_25?igsh=MXZtand4b2ZkcGRlaQ=="
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
           </div>
         </div>
         <div class="copyright">
